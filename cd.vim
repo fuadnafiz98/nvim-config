@@ -137,6 +137,8 @@ let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 " let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 """ ::: THEME ::: 
+
+
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -146,15 +148,15 @@ if (has("termguicolors"))
  set termguicolors
 endif
 
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_italic=1
-let g:gruvbox_invert_selection='0'
-colorscheme gruvbox
-set background=dark
-let g:lightline = {'colorscheme' : 'gruvbox'}
+" let g:gruvbox_contrast_dark = 'hard'
+" let g:gruvbox_italic=1
+" let g:gruvbox_invert_selection='0'
+" colorscheme gruvbox
+" set background=dark
+" let g:lightline = {'colorscheme' : 'gruvbox'}
 
-" colorscheme nord
-
+colorscheme challenger_deep
+let g:lightline = { 'colorscheme': 'challenger_deep'}
 " set background=dark
 " colorscheme palenight
 " let g:lightline = { 'colorscheme': 'palenight' }
@@ -166,6 +168,8 @@ let g:lightline = {'colorscheme' : 'gruvbox'}
 
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 lua require'nvim_lsp'.tsserver.setup{ on_attach=require'completion'.on_attach }
+lua require'nvim_lsp'.clangd.setup{ on_attach=require'completion'.on_attach }
+
 
 "
 """leader
