@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/mnt/B49635D3963596B8/Web/Web/nodejs/nestjs/recomplete/src'
+let g:netrw_dirhist_8='/mnt/B49635D3963596B8/Web/Web/nodejs/nestjs/recomplete'
+let g:netrw_dirhist_7='/mnt/B49635D3963596B8/Web/Web/go/docs'
+let g:netrw_dirhist_6='/mnt/B49635D3963596B8/Web/Web/typescript/starter/src'
+let g:netrw_dirhist_5='/mnt/B49635D3963596B8/Web/Web/typescript/starter'
+let g:netrw_dirhist_4='/mnt/B49635D3963596B8/Web/Web/typescript/starter/src'
+let g:netrw_dirhist_3='/mnt/B49635D3963596B8/Web/Web/typescript/starter'
+let g:netrw_dirhist_2='/mnt/B49635D3963596B8/Web/Web/go/docs/main'
+let g:netrw_dirhist_1='/mnt/B49635D3963596B8/Web/Web/go/docs'
+let g:netrw_dirhist_0='/home/fuadnafiz98/.config/nvim'
