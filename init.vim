@@ -43,28 +43,8 @@ set shortmess+=c
 
 set colorcolumn=80
 
-call plug#begin('~/.vim/plugged')
-
-" Neovim lsp Plugins
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
-Plug 'tjdevries/nlua.nvim'
-Plug 'tjdevries/lsp_extensions.nvim'
-Plug 'tweekmonster/gofmt.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'gruvbox-community/gruvbox'
-Plug 'octol/vim-cpp-enhanced-highlight'
-
-call plug#end()
-
-nnoremap <leader>cP :lua require("contextprint").add_statement()<CR>
-nnoremap <leader>cp :lua require("contextprint").add_statement(true)<CR>
-
-fun! GotoWindow(id)
-    call win_gotoid(a:id)
-    MaximizerToggle
-endfun
+" nnoremap <leader>cP :lua require("contextprint").add_statement()<CR>
+" nnoremap <leader>cp :lua require("contextprint").add_statement(true)<CR>
 
 set encoding=UTF-8
 set nocompatible
@@ -133,6 +113,7 @@ Plug 'vim-pandoc/vim-pandoc'
 " Plug 'https://gitlab.com/rwxrob/vim-pandoc-syntax-simple'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
+Plug 'joshdick/onedark.vim'
 Plug 'gruvbox-community/gruvbox'
 " ultra dark 
 Plug 'yuqio/vim-darkspace'
@@ -199,6 +180,7 @@ endfunction
 
 """ prettier 
 autocmd BufWritePre *.js Neoformat
+autocmd BufWritePre *.ts Neoformat
 
 """
 " file search 
@@ -234,12 +216,18 @@ endif
 " set background=dark
 " set termguicolors     " enable true colors support
 " colorscheme eldar
-set background=dark
-set termguicolors
-colorscheme darkspace
-let g:darkspace_italics=1
-let g:airline_theme='darkspace'
+" set background=dark
+" set termguicolors
+" colorscheme darkspace
+" let g:darkspace_italics=1
+" let g:airline_theme='darkspace'
 " colorscheme vim-material
+
+colorscheme onedark
+let g:onedark_terminal_italics=1
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \ }
 
 """leader
 let mapleader = " "
